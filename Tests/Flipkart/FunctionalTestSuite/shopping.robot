@@ -1,6 +1,5 @@
 *** Settings ***
-Library  SeleniumLibrary
-
+Resource  ../../Resources/mykeywords.robot
 *** Variables ***
 ${search_flipkart}  Flipkart
 ${url}  https://www.google.com/
@@ -42,14 +41,4 @@ Flipkart user login
     sleep  5s
     stop test case
 
-*** Keywords ***
 
-
-start test case
-    Open Browser  ${url}  chrome
-    maximize browser window
-flipkart search
-    Input Text  name:q  ${search_product}
-    click button  class:L0Z3Pu
-stop test case
-    Close Browser
